@@ -8,13 +8,24 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using System.Data;
+using System.Data.Sql;
+
+
 namespace SubCriteriaJsonParser
 {
-    public partial class Form1 : Form
+    
+    public partial class Main : Form
     {
-        public Form1()
+        public static string json;
+        public Main()
         {
             InitializeComponent();
+        }
+
+        private void btnParse_Click(object sender, EventArgs e)
+        {
+            json = @textInput.Text;
         }
     }
 }
